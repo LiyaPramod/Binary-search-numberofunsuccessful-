@@ -1,0 +1,41 @@
+import java.util.*;
+ class Source {
+   public int getBinarySearchUnsuccessfulComparisonCount(int[] inputArr, int key,int size) {
+   int start =0;
+   int end = inputArr.length-1;
+   int attempt=0;
+   if(size==0)
+   {
+       return -1;
+   }
+   while(start<=end)
+   {
+       attempt++;
+       int mid = start+(end - start)/2;
+       if(inputArr[mid]==key)
+       {
+         return attempt-1;
+       }
+        else if(inputArr[mid]<key){
+        start = mid+1;
+        }
+        else{
+            end = mid -1;
+        }
+       
+   }
+   
+    return attempt-1; 
+   }
+   public static void main(String args[] ) throws Exception {
+       Source bs = new Source();
+       Scanner scanner = new Scanner(System.in);
+       int size = scanner.nextInt();
+       int array[] = new int[size];
+       for (int i = 0; i < size; i++) {
+           array[i] = scanner.nextInt();
+       }
+       int key = scanner.nextInt();
+       System.out.println(bs.getBinarySearchUnsuccessfulComparisonCount(array, key,size));
+   }
+}
