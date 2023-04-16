@@ -1,0 +1,33 @@
+# Binary-search-numberofunsuccessful-attempts
+Write a code that returns the number of unsuccessful attempts made to search for an element in the array using Binary search.
+The code should
+Take the size of the array as an input from the user
+The elements of the array as an input from the user
+The key you are searching for as an input from the user
+sample test cases as follows
+case 1
+Input
+20
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+21
+Solution output
+4
+Expected output
+5
+case 2
+Input
+0
+8
+Solution output
+-1
+Expected output
+0
+case 3
+Input
+5
+2 3 4 5 8
+8
+Solution output
+2
+Expected output
+2
